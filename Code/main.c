@@ -12,7 +12,7 @@ FILE *fp;
 //Function to print out print game results out to the pre-defined txt file
 void resultsFile(char printingMessage[]) {
    //Creates the desired output txt file, replaces the previous file contents with the new code output
-   fp = fopen(file, "w");
+   fp = fopen(file, "a");
    //For now we're printing out message from main
    fprintf(fp, printingMessage);
 }
@@ -20,7 +20,7 @@ void resultsFile(char printingMessage[]) {
 //Main function to initialise board & players, place tokens and play game
 void main() {
    //trial message to be printed out
-   char message[] = "Hello There!\nGeneral Kenobi!\tYou ARE a bold one!";
+   char message[] = "Hello There!\nGeneral Kenobi!\tYou ARE a bold one!\n";
    //Printing message to the console
    printf("%s", message);
    //prints out the game results to the pre-defined txt file
