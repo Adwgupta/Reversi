@@ -1,0 +1,34 @@
+8 x 8 board - 64 sqaures
+you're either B or W, 
+any disks boarderd in a straight line of your colour after your turn 
+are turned into your colour
+person with most discs win
+
+4 sqaures in the middle, in a 
+      B  W
+      W  b
+formation
+
+moves are valid if there's at least on straight line occupied by the new 
+dics and a pre existin disc
+Black moves first always
+
+If no valid move exists, you must pass your turn
+Game ends when neither player can move
+   - all squares covered or no valid turn by both
+Ties are possible
+
+Specifications:
+   • Ask players for name as input and assign B/W
+   • Keep track of the score's
+   • Initialise the Game
+   • Request a move in format of letter&number 
+               - Letter in range of A -> H
+               - Number in range of 1 -> 8
+   • Check if move is valid/invalid
+         - If invalid, request proper move
+   • Pass is only possible if there is no valid move
+   • Update and print the board after each move
+   • After game is over, check which player won, print out winner,
+     score, final board, the date and time of the game.
+ 
