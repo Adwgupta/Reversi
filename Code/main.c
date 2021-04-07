@@ -10,19 +10,15 @@
 FILE *fp;
 
 //Function to print out print game results out to the pre-defined txt file
-void resultsFile(char printingMessage[]){
-   if ((fp = fopen(file, "w")) == NULL) { 
-      //display error if file cannot be opened
-      perror;
-   }
-   else {
-      //For now we're printing out message from main
-      fprintf(fp, printingMessage);
-   }
+void resultsFile(char printingMessage[]) {
+   //Creates the desired output txt file, replaces the previous file contents with the new code output
+   fp = fopen(file, "w");
+   //For now we're printing out message from main
+   fprintf(fp, printingMessage);
 }
 
 //Main function to initialise board & players, place tokens and play game
-void main(){
+void main() {
    //trial message to be printed out
    char message[] = "Hello There!\nGeneral Kenobi!\tYou ARE a bold one!";
    //Printing message to the console
