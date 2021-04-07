@@ -1,21 +1,27 @@
 #include <stdio.h>
+//Name for the results txt file
 #define file "othello-results.txt"
+//File pointer
+FILE *fp;
 
-FILE *results;
-
-void resultsFile();
-
-void main(){
-   printf("Hello There!\nThis is the creation of the main file and the first commit of this project");
-   resultsFile();
-}
-//Function to print out game results into a txt file
-void resultsFile(){
-   if ((results = fopen(file, "w")) == NULL) { 
+//Function to print out print game results out to the pre-defined txt file
+void resultsFile(char printingMessage[]){
+   if ((fp = fopen(file, "w")) == NULL) { 
       //display error if file cannot be opened
       perror;
    }
    else {
-      fprintf(results, "Trial run");
+      //For now we're printing out message from main
+      fprintf(fp, printingMessage);
    }
+}
+
+//Main function to initialise board & players, place tokens and play game
+void main(){
+   //trial message to be printed out
+   char message[] = "Hello There!\nGeneral Kenobi!\tYou *are* a bold one!";
+   //Printing message to the console
+   printf("%s", message);
+   //prints out the game results to the pre-defined txt file
+   resultsFile(message);
 }
