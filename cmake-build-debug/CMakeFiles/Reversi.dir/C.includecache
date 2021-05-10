@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/adity/Desktop/Reversi/ascii.c
+ascii.h
+C:/Users/adity/Desktop/Reversi/ascii.h
+
+C:/Users/adity/Desktop/Reversi/ascii.h
+stdio.h
+-
+

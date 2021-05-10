@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "AfterGame.h"
+#include "ascii.h"
 
 void saveResultsToFile(FILE *out) {
 
@@ -23,14 +24,8 @@ void gameResults(FILE *out) {
    //Seeds variable t with current time
    time(&t);
    //For now we're printing out the message string/array from main and the current time
-   fprintf(out, "================================================================================================\n");
-   fprintf(out, "  _______      ___       ____  ____   _______      ______   ____    ____  _______  ______               \n"
-                       " /  _____|    /   \\     |    \\/    | |   ____|    /  __  \\  \\   \\  /   / |   ____||   _  \\        \n"
-                       "|  |  __     /  ^  \\    |  ^    ^  | |  |__      |  |  |  |  \\   \\/   /  |  |__   |  |_)  |           \n"
-                       "|  | |_ |   /  /_\\  \\   |  |\\__/|  | |   __|     |  |  |  |   \\      /   |   __|  |      /          \n"
-                       "|  |__| |  /  _____  \\  |  |    |  | |  |____    |  '--'  |    \\    /    |  |____ |  |\\  \\___      \n"
-                       " \\______| /__/     \\__\\ |__|    |__| |_______|    \\______/      \\__/     |_______||__| \\_____|    \n\n");
-   fprintf(out, "Game Over, good game players!\nTime finished at:\n%s", ctime(&t));
+   gameOverArt(out);
+   fprintf(out, "Good game players!\nGame finished at:\n%s", ctime(&t));
 
    if (out == fp)
       saveResultsToFile(fp);

@@ -1,6 +1,6 @@
 /**
  * Library file to print out overall game results to a txt file
- * as well as printing the necessaryones to the console
+ * as well as printing the necessary ones to the console
  */
 
 #ifndef REVERSI_AFTERGAME_H
@@ -13,7 +13,7 @@ FILE *fp;
 
 /**
  * Function to print out the last board to the pre-defined txt file
- * the function takes in a file pointer as its paramater to allow the results to be printed out to the console
+ * the function takes in a file pointer as its parameter to allow the results to be printed out to the console
  */
 void saveResultsToFile(FILE *out);
 
