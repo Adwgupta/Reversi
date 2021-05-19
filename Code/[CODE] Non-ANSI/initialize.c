@@ -12,16 +12,15 @@ void removeNewline(char string[]) {
       string[len] = '\0';
 }
 
-//Function to take in user input for player's names, assigns each player a colour and the starting score of 2
 void playerSetUp(Player *p1, Player *p2) {
    //Player 1 (black)
-   printf("Please enter player 1's name (representing black disk): ");
+   printf("(Disk Colour: Black) - Player 1, please enter your name: ");
    fgets(p1->name, NAME_LENGTH, stdin); //Prompts for name.
    p1->type = BLACK;                    //Player 1 plays with black disks.
    p1->disks = 2;                       //Each player starts with 2 disks placed diagonally at the centre of the board.
 
    //Player 2 (white)
-   printf("Please enter player 2's name (representing white disk): ");
+   printf("(Disk Colour: White) - Player 2, please enter your name: ");
    fgets(p2->name, NAME_LENGTH, stdin); //Prompts for name.
    p2->type = WHITE;                    //Player 2 plays with black disks.
    p2->disks = 2;                       //Each player starts with 2 disks placed diagonally at the centre of the board.
