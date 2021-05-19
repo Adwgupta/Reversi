@@ -1,16 +1,21 @@
 # Reversi 
-### COMP10050 Software Engineering Project I Assignment 2
-> A C program that produces a randomised playlist based on an input list of songs
 
-## About The Program
+COMP10050 Software Engineering Project I Assignment 3
 
-Detailed Rules: [Google Docs](https://youtu.be/-lmhJOhQHWc?list=PLVbxVQf7e2KRz1J34jFf7jDJFDT9lvnQ9)
+Collaboratively create a program Reversi game logic in C. 
 
-## Getting Started
-__Windows Users__  
-```Download each file, store it in the same directory/folder and and run main.exe with your file's full name+extenstion```
+After implementing Reversi's board initialization in Assignment 2, this program should have the following game logic:
+1. A starting condition of 4 disks on board (2 black, 2 white).
+2. Compute possible moves for each player, prompt player for move, and place disk accordingly.
+3. Print game result and save to file.
 
-## Authors
-* [Adityaa Gupta](https://github.com/Adwgupta)
-#### Grade Received
+Additionally, 
+- Use Git to collaborate (original submission was on GitLab).
+- Comment and separate code into independent modules.
 
+The documentation.pdf contains
+1. How we decided to implement the game logic
+2. How we divided the work
+3. What each function did and how they're structured
+
+These files are uploaded here as the final submitted version, untouched except to remove personal info.

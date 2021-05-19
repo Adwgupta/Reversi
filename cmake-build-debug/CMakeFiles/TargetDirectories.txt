@@ -1,3 +1,0 @@
-C:/Users/adity/Desktop/Reversi/cmake-build-debug/CMakeFiles/Reversi.dir
-C:/Users/adity/Desktop/Reversi/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/adity/Desktop/Reversi/cmake-build-debug/CMakeFiles/rebuild_cache.dir

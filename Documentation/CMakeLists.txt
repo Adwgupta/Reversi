@@ -1,15 +1,25 @@
 cmake_minimum_required(VERSION 3.17)
-project(Code C)
+project(Othello)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(Code
-        AfterGame.c
-        AfterGame.h
+add_executable(Othello
         main.c
-        PreGame.c
-        PreGame.h
-        tempCodeRunnerFile.c
-        yes.c asc.cpp asc.h)
+        colour.c
+        colour.h
+        ascii.c
+        ascii.h
+        preGame.c
+        preGame.h
+        initialize.c
+        initialize.h
+        findMoves.c
+        findMoves.h
+        turns.c
+        turns.h
+        updateGame.c
+        updateGame.h
+        afterGame.c
+        afterGame.h)

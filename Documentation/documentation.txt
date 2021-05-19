@@ -1,0 +1,102 @@
+[COMP10050] Software Engineering Project I: Assignment 3 - Othello/Reversi Game
+
+Author:           Adityaa Gupta
+Student Number:   20324976
+
+Language:         C, CMake 
+Tools:            Git, Visual Studio Code, CLion
+
+
+Link to Github repo
+https://github.com/Adwgupta/Reversi
+
+================================================================================ [DOCUMENTATION] ================================================================================
+
+The 3 main areas of this project were how I would: 
+   • Manage the initalisation:
+      There were 3 main things to do before the game could start:
+         
+         1. Print out the instructions in a seperate txt file, the time the game started and get the player's names.
+         
+         2. Set up the board with the 4 centre pieces and set every other "square" in the board to empty.
+        
+         3. Initialising the game itself:
+            - I used an 8 x 8 2D array for the board.
+            - I used a simple struct to initalise the players, the disks, their positions.
+            - I used a linked list rather than a 2D array to store the playable moves that each player would be allowed to play for each turn
+              although linked lists would be considered more complex to use rather than a 2D array for this if implemented correctly, linked lists
+              provide more flexible memory storage to allow data to be inserted into sai linked lists as well as deleting said data from said linked lists, an example of
+              this is how I was able to organise the coordinates of all the playable moves by ascending order with respect to rows and columns, so it would be rows first
+              and then columns.
+              
+   • Manage the moves:
+      In order for the game to work correctly there were 3 main challenges:
+      
+         1. Find all the playable moves for the current players.
+
+         2. Display and get a choice from the user.
+
+         3. Use the selected choice to place the disk and update the board.
+
+           • I decided to use an if statement to check if that spot is occupied by any other type of disk. 
+           • If not, proceed to place the disk and update the board. 
+           • For example if a player's colour is white to update the board, I need to check the immediate perimeter of the player's disks for any black disks. 
+           • If there are, the function needs to search further towards that direction relative to the spot the player just placed their white disk. 
+           • The function then needed to searching until either the current player's disks or an empty space was found. 
+              - If what was found was an empty space, then that means we no more black disks can be updated in that direction to white disks 
+              - If what was found was a white disk, then all the black disks between the white disk placed by the player can be updated.
+
+         
+   • Manage the ending
+      - When the turn functon ends, ie, there's no empty spaces left on the board or neither player can make a legal move, only then the ending function will be executed. 
+        Final results will be printed to the board, and the final board will be printed to the output txt file along with the player's names, scores, colours and the time
+        the game started as specified in the assignment specification.
+      
+      - A main issue that arose was how to handle draws, ie when neither player can make a legal move. 
+        It turned into a problem with my while loop where it would go into an infinite loop where the turns kept passing to the next player until I force ended the program.
+        The solution to this was to set up a counter which would be incremented and once it was incremented twice, ie in two consecutive moves, a turn was passed twice
+        I made the function end by doing a return in an if statement which would allow the program to go straight to the ending function.
+
+
+And finally, as a bonus I found out how to print an output in colours using ANSI escape sequences, and with a background rather than to just use W and B for the disks.
+A problem I quickly found with this method was that CLion doesn't support ANSI escape sequences and there was a very lengthy process to allow them to be used
+for command prompt, so a simple solution was to simply make a new function for printing for ides that can support ANSI escape sequences and one for ides and terminals.
+that cannot.
+
+============================================================================= [COMPILING AND RUNNING] =============================================================================
+
+                                                            ᐯᐯᐯ THIS IS REALLY IMPORANT ᐯᐯᐯ
+If you are running this program, please download the correct folder's files depending on if your terminal/ide ALLOWS ANSI ESCAPE SEQUENCES OR not
+                                                            ᐱᐱᐱ THIS IS REALLY IMPORANT ᐱᐱᐱ
+
+Command for running the program on VSCode: 
+•     Go to your directory where you've downloaded this folder                                                        
+•     Go to either the ANSI supported folder or NON ANSI supported folder using either 
+
+• [   cd ansi-supported   ]   
+•     or     
+• [   cd non-ansi         ]  
+
+•     depending on which version you'd like to run, as VSCode supports both version
+•     Then copy paste one of the following options:
+
+• [   gcc main.c initialize.c turns.c updategame.c pregame.c aftergame.c findmoves.c colour.c ascii.c -o main         ]
+• [   .\main                                                                                                          ]
+
+[OR]
+
+• [   gcc main.c initialize.c turns.c updategame.c pregame.c aftergame.c findmoves.c colour.c ascii.c -o main.exe     ]
+• [   .\main.exe                                                                                                      ]
+
+
+Command for running the program on Command Prompt:
+•     Go to your directory where you've downloaded this folder                                                        
+•     Go to either the non-ANSI supported folder by using:
+
+• [   cd non-ansi   ]  
+•     Then copy paste the following:
+• [   gcc -o main.exe main.c initialize.c turns.c updategame.c pregame.c aftergame.c findmoves.c colour.c ascii.c     ]
+• [   main.exe                                                                                                        ]
+
+
+Alternatively, if you go into each folder, non-ANSI or ANSI-supported, and run the main.exe file, as that would be a shortcut
