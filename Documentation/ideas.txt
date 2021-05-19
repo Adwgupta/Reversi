@@ -10,7 +10,7 @@ person with most discs win
 formation
 
 moves are valid if there's at least on straight line occupied by the new 
-dics and a pre existin disc
+disks and a pre existing disc
 Black moves first always
 
 If no valid move exists, you must pass your turn
@@ -31,4 +31,6 @@ Specifications:
    • Update and print the board after each move
    • After game is over, check which player won, print out winner,
      score, final board, the date and time of the game.
+
+GUI? - Coloured output, ASCI art, user friendly prompts, etc
  

@@ -57,6 +57,15 @@ The 3 main areas of this project were how I would:
         The solution to this was to set up a counter which would be incremented and once it was incremented twice, ie in two consecutive moves, a turn was passed twice
         I made the function end by doing a return in an if statement which would allow the program to go straight to the ending function.
 
+I divided all of my code into individual files and modules and functions, by firstly going through how the game works on paper.
+Secondly, going through the "GUI" of the game and what I want mine to look like.
+Thirdly, creating pseudo code and functions, a flow-chart, ideas
+And finally, once I put together my first draft of the code, I grouped my early functions into 4 main segments:
+	1. Pre-Game
+	2. After-Game
+	4. Game Set up
+	3. Game Logic - [turns, disk updating, scores, etc]
+	5. "GUI" - [Art work, display, printfs etc]
 
 And finally, as a bonus I found out how to print an output in colours using ANSI escape sequences, and with a background rather than to just use W and B for the disks.
 A problem I quickly found with this method was that CLion doesn't support ANSI escape sequences and there was a very lengthy process to allow them to be used
