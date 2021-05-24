@@ -44,7 +44,7 @@ Design Choices
 Additional info
 Sample I/O
 
- --- ---
+
 ### Author:           [Adityaa Gupta](https://github.com/Adwgupta)
 ### Language(s):      C & CMake 
 ### Tools:            Git, Visual Studio Code, CLion
