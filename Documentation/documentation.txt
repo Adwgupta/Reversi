@@ -89,18 +89,12 @@ Command for running the program on VSCode:
 •     depending on which version you'd like to run, as VSCode supports both version
 •     Then copy paste one of the following options:
 
-• [   gcc main.c initialize.c turns.c updategame.c pregame.c aftergame.c findmoves.c colour.c ascii.c -o main         ]
-• [   .\main                                                                                                          ]
-
-[OR]
-
-• [   gcc main.c initialize.c turns.c updategame.c pregame.c aftergame.c findmoves.c colour.c ascii.c -o main.exe     ]
+• [   gcc -o main.exe main.c initialize.c turns.c updategame.c pregame.c aftergame.c findmoves.c colour.c ascii.c     ]
 • [   .\main.exe                                                                                                      ]
-
 
 Command for running the program on Command Prompt:
 •     Go to your directory where you've downloaded this folder                                                        
-•     Go to either the non-ANSI supported folder by using:
+•     Go to the non-ANSI supported folder by using:
 
 • [   cd non-ansi   ]  
 •     Then copy paste the following:
@@ -108,4 +102,4 @@ Command for running the program on Command Prompt:
 • [   main.exe                                                                                                        ]
 
 
-Alternatively, if you go into each folder, non-ANSI or ANSI-supported, and run the main.exe file, as that would be a shortcut
+Alternatively, you could go into each folder, non-ANSI or ANSI-supported, and run the main.exe file, as that would be a shortcut.
