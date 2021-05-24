@@ -28,6 +28,8 @@ Specifications:
    • Check if move is valid/invalid
          - If invalid, request proper move
    • Pass is only possible if there is no valid move
+                        - Lot of errors and problems, maybe find all possible moves and let user choose instead?
+                        
    • Update and print the board after each move
    • After game is over, check which player won, print out winner,
      score, final board, the date and time of the game.
