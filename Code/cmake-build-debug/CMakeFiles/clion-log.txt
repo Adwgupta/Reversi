@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\adity\Desktop\Reversi\Code Select CMakeLists.txt
