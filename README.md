@@ -37,12 +37,12 @@ main.exe
 ```
  --- ---
 ### Documentation
-The documentation.txt file contains  
-How I decided to implement the game logic  
-How I separated the code into independent modules  
-Design Choices  
-Additional info  
-Sample I/O  
+The documentation.txt file contains:  
+- How I decided to implement the game logic  
+- How I separated the code into independent modules  
+- Design Choices  
+- Additional info  
+- Sample I/O  
  --- ---
 
 ### Author:           [Adityaa Gupta](https://github.com/Adwgupta)
