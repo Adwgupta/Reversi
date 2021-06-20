@@ -10,6 +10,7 @@ Coloured Edition
 
 Non-coloured edition  
 ![image](https://user-images.githubusercontent.com/71985681/118888254-53f41180-b8f3-11eb-8fb8-93cf5370b1f3.png)
+ --- ---
 
 The game begins with four discs placed in a square in the middle of the grid,  
 Two with their black side facing up, two with their white side facing up  
