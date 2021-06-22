@@ -1,12 +1,12 @@
 #ifndef OTHELLO_INITIALIZE_H
 #define OTHELLO_INITIALIZE_H
 
+#include "ascii.h"    
 /**
  * Custom library file to print out coloured output to the console
  * Note: This library cannot be used in CLion or command prompt as CLion does not support ANSI escape sequences
  */
 #include "colour.h"
-#include "ascii.h"      
 
 //Max length for player name
 #define NAME_LENGTH 50  
@@ -15,13 +15,13 @@
 
 //Disk colours
 enum colour {
-   BLACK, WHITE, EMPTY             //Disk colours
+   BLACK, WHITE, EMPTY                  //Disk colours
 }; 
 
 //Player info
 typedef struct Player {
-   char name[NAME_LENGTH];         //Player name.
-   enum colour type;               //Player's disk colour.
+   char name[NAME_LENGTH];              //Player name.
+   enum colour type;                    //Player's disk colour.
 	int disks;                      //Player's current number of disks on board.
 }  Player;
 
@@ -31,7 +31,7 @@ typedef struct Position {
 	int col;                        //column position for disks
 }  Position;
 
-//Disk info.
+//Disk info
 typedef struct Disk {
 	enum colour type;               //Disk colour.
 	Position pos;                   //Disk position.
@@ -44,8 +44,8 @@ struct ListNode {
 	struct ListNode *nextPtr;       //Points to next node.
 };
 
-typedef struct ListNode listNode;  //ListNode is a synonym for struct ListNode.
-typedef listNode *listNodePtr;     //ListNodePtr is a synonym for pointer to a listNode.
+typedef struct ListNode listNode;       //ListNode(synonym) for struct ListNode.
+typedef listNode *listNodePtr;          //ListNodePtr(synonym) for pointer to a listNode.
 
 /**
  * Function prototypes
