@@ -39,19 +39,21 @@ void gameResults(FILE *out, Disk board[][BOARD_SIZE], Player p1, Player p2) {
     * Print out the score
     * Player 1
     */
-	fprintf(out, "\n(Black) - Player %s's points: %d.", p1.name, p1.disks);
+   fprintf(out, "\n(Black) - Player %s's points: %d.", p1.name, p1.disks);
    //Player 2
-	fprintf(out, "\n(White) - Player %s's points: %d.", p2.name, p2.disks);
+   fprintf(out, "\n(White) - Player %s's points: %d.", p2.name, p2.disks);
 	
    //If Player 1 wins
-	if (p1.disks > p2.disks)
+   if (p1.disks > p2.disks)
       fprintf(out, "\n\nCongratulations %s, you've unlocked the achievement [100%% TRUE JEDI] and you have won the game!\n", p1.name);
+	
    //If Player 2 wins
-	if (p2.disks > p1.disks)
+   if (p2.disks > p1.disks)
       fprintf(out, "\n\nCongratulations %s, you've unlocked the achievement [100%% TRUE JEDI] and you have won the game!\n", p2.name);
+	
    //If its a draw
-	else 
-		fprintf(out, "\nGood game players %s and %s!\nYou've both unlocked the achievements [50%% TRUE JEDI] as you've somehow drawed!\n", p1.name, p2.name);
+   else 
+      fprintf(out, "\nGood game players %s and %s!\nYou've both unlocked the achievements [50%% TRUE JEDI] as you've somehow drawed!\n", p1.name, p2.name);
    
    resetcolour();
 }
@@ -91,11 +93,12 @@ void saveBoardToFile(FILE *out, Disk board[][BOARD_SIZE]) {
       fprintf(out, " %d\n", j + 1);                  //Left row co-ordinates from 1 - 8
       fprintf(out, "  |_______|_______|_______|_______|_______|_______|_______|_______|");
    }
-
+	
    fprintf(out, "\n     ");
    //This for loop iterates around the columns to print out the column co-ordinates from A - H
    for (int i = 1; i <= BOARD_SIZE; i++)
       fprintf(out, " %c      ", i - 1 + 'A');
+	
    printf("\n\n\n");
    resetcolour();
 }
